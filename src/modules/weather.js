@@ -1,5 +1,5 @@
 const weatherParagraph = document.getElementById('weatherParagraph');
-
+const imgDiv = document.getElementById('imgDiv');
 let name = '';
 let country = '';
 let description = '';
@@ -11,6 +11,11 @@ let tempC = 0;
 let feelC = 0;
 
 async function fetchCity(city) {
+  try {
+    imgDiv.classList = 'weather';
+  weatherParagraph.innerHTML = `<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>`;
   const response = await fetch(city, { mode: 'cors' });
   const data = await response.json();
   weatherParagraph.innerHTML = `<h3 class="">${data.name}, ${data.sys.country}</h3 class="">
@@ -18,6 +23,9 @@ async function fetchCity(city) {
      <h4 class="">${data.weather[0].main}<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon"></h4>
      <h4 class="">Wind speed: ${data.wind.speed} m/h</h4>
      <h4 class="">Real feel: ${Math.round(data.main.feels_like - 273.15)} C</h4>`;
+
+
+
   tempF = Math.round((data.main.temp - 273.15) * (9 / 5) + 32);
   feelF = Math.round((data.main.feels_like - 273.15) * (9 / 5) + 32);
   name = data.name;
@@ -27,6 +35,11 @@ async function fetchCity(city) {
   icon = data.weather[0].icon;
   tempC = Math.round(data.main.temp - 273.15);
   feelC = Math.round(data.main.feels_like - 273.15);
+  }
+  catch (error) {
+    console.error(error);
+    alert("City not found");
+  }
 }
 
 const displayF = () => {
