@@ -1,67 +1,62 @@
 html {
   height: 100%;
 }
-
 body {
-  position: relative;
   height: 100%;
+
 }
 
 .weather {
-  height: 100%;
   background-image:url("./images/weather.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .clouds {
-  height: 100%;
   background-image:url("./images/clouds.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .fog {
-  height: 100%;
   background-image:url("./images/fog.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .rain {
-  height: 100%;
   background-image:url("./images/rain.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .snow {
-  height: 100%;
   background-image:url("./images/snow.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .sun {
-  height: 100%;
   background-image:url("./images/sun.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-form {
-  position: absolute;
-  top: 20vh;
-  left: 47vh;
+.change {
+  background: none;
+  border: none;
+  padding-bottom: 2vh;
+  margin-left: -1vh;
 }
 
-img {
-  width: 100vh;
-  object-fit: contain;
+.change:active {
+  background: #f7f7f7;
 }
+@media (min-width: 768px) {
 
-#weatherParagraph {
-  position: absolute;
-  top: 30vh;
-  left: 47vh;
+  .left {
+    border-right: 2px solid black;
+    padding-right: 3vh;
+    }
+
 }
