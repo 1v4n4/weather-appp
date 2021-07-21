@@ -23,7 +23,19 @@ async function fetchCity(city) {
      <h4 class="">${data.weather[0].main}<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon"></h4>
      <h4 class="">Wind speed: ${data.wind.speed} m/h</h4>
      <h4 class="">Real feel: ${Math.round(data.main.feels_like - 273.15)} C</h4>`;
+    let id = data.weather[0].id;
+    console.log(id)
 
+    if (id < 600) {
+        imgDiv.classList = 'rain';}
+    else if  (id < 700) {
+        imgDiv.classList = 'snow'; }
+    else if (id < 800) {
+        imgDiv.classList = 'fog'; }
+    else  if (id === 800) {
+          imgDiv.classList = 'sun'; }
+    else if (id > 800) {
+        imgDiv.classList = 'clouds'; }
 
 
   tempF = Math.round((data.main.temp - 273.15) * (9 / 5) + 32);
