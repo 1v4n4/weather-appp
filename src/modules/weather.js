@@ -24,7 +24,7 @@ async function fetchCity(city) {
      <h1 class="pt-3 text-md-center">${Math.round(data.main.temp - 273.15)} <button type="button" class="change fs-1" id="change"> C</button></h1>
   </div>
   <div class="right">
-     <h4 class="">${data.weather[0].main}<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" class="ms-1 pb-2" alt="weather icon"></h4>
+     <h4 class="">${data.weather[0].main}<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" class="ms-1 pb-2" alt="weather icon"></h4>
      <h4 class="">Wind speed: ${data.wind.speed} m/h</h4>
      <h4 class="mt-4">Real feel: ${Math.round(data.main.feels_like - 273.15)} C</h4>
   </div>`;
@@ -65,7 +65,7 @@ const displayF = () => {
     <h1 class="pt-3 text-md-center">${tempF} <button type="button" class="change fs-1" id="change">  F</button></h1>
   </div>
   <div class="right">
-    <h4 class="">${description}<img src="http://openweathermap.org/img/wn/${icon}.png" class="ms-1 pb-2" alt="weather icon"></h4>
+    <h4 class="">${description}<img src="https://openweathermap.org/img/wn/${icon}.png" class="ms-1 pb-2" alt="weather icon"></h4>
     <h4 class="">Wind speed: ${wind} m/h</h4>
     <h4 class="mt-4">Real feel: ${feelF} F</h4>
   </div>`;
