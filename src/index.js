@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
   const city = `http://api.openweathermap.org/data/2.5/weather?q=${input}&APPID=ea056517cfd579edd873aeaf2255944e`;
 
   fetchCity(city);
-
+  form[0].value = '';
 });
 const change = document.getElementById('weatherParagraph');
 
