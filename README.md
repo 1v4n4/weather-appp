@@ -1,7 +1,7 @@
 # Weather
 This weather forecast site uses weather OpenWeatherMap.org API to get weather data for cities worldwide. By entering the name of the location, users get the current weather data in Fahrenheit or Celsius.
 
-## [Live link](https://1v4n4.github.io/weather-app/)
+## [Live link](https://blissful-minsky-17e783.netlify.app/)
 
 ## Built With
 
